@@ -1,6 +1,7 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Raleway:wght@400;600&display=swap');
 @import "status-bar.css";
+@import "variables.css";
 /* 이렇게 하면 style.css파일은 다른 css파일을 추가하는 파일로 사용가능 */
 body {
     font-family: 'Homemade Apple', cursive;
@@ -24,4 +25,48 @@ body {
 .welcome-header_text{
     width: 30%;
     opacity:0.7;
+}
+
+.login-form{
+    display:flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+.login-form input{
+    padding: 15px 0px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 25px;
+    transition: border-color 1s ease-in-out;
+}
+
+.login-form input:not([type="submit"]){
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* input의 border없애기-> 밑줄그어주기
+placeholder에 쓰인 글자들 색 연하게 만들기 */
+.login-form input::placeholder{
+    opacity:rgba(0,0,0,0.4);
+}
+/* input type이 text나 password일 때만 적용되도록 하기 */
+.login-form input:focus{
+    border-color:var(--yellow);
+}
+/* not을 통해서 나머지 border자체를 없애주면 focus색상을 따로 설정해줄 필요가 없어진다. border자체가 나머지것들은 없으니까. */
+
+.login-form input[type="submit"]{
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding:20px;
+    border-radius: 5px;
+}
+/* form{
+    text-align: center;
+} 링크 색상도 바꿔주고 하려면 링크로 특정하는게 편리*/
+.login-form a{
+    text-align: center;
+    text-decoration: none;
+    color:inherit;
+    font-size: 13px;
 }
