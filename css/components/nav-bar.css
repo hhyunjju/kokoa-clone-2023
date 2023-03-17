@@ -1,0 +1,9 @@
+.nav{
+    background-color: #F9F9F9;
+    padding: 20px 40px;
+}
+.nav_list{
+    /* display:flex; 적용안되는 이유? nav_list에 적용해줘야함. nav의 자식은 nav_list라 한덩어리일 뿐임. */
+    display:flex;
+    justify-content: space-between;
+}
