@@ -6,12 +6,15 @@
 /* Components */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
-
+@import "components/screen-header.css";
+@import "components/user-component.css";
 /* Screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 /* 이렇게 하면 style.css파일은 다른 css파일을 추가하는 파일로 사용가능 */
 body {
     font-family: 'Homemade Apple', cursive;
     font-family: 'Raleway', sans-serif;
     height: 1000vh;
+    color: #2F363E;
 }

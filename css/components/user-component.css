@@ -1,0 +1,38 @@
+/* 수직으로 되어있는 첫번째 column의 두가지 요소들을 나란히 정렬해주기 */
+.user-component_image{
+    width: 70px;
+    height:70px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+/* big-80x80, regular-70x70, small-60x60 */
+.user-component, .user-component_column:first-child{
+    /* column1안에있는 image와 profile 나란히 놔주기 */
+    display:flex;
+    align-items: center;
+}
+.user-component_myname{
+    font-weight: 600;
+    font-size: 22px;
+}
+.user-component_subtitle{
+    margin-top:8px;
+    color:rgba(0,0,0,0.5);
+    font-size:17px;
+}
+/* user-component_image--xl은 user-component_image와 똑같지만 너비랑 높이만 라지사이즈로 다르게 해주면 된다. */
+.user-component_image--xl{
+    width: 80px;
+    height: 80px;
+}
+/* Friends가 적혀있는 header옆의 마진이 다른 태그들에도 다 적용되기 때문에 해당 마진을 변수로 저장한다. */
+.friends_screen{
+    padding: 0px var(--horizontal-space);
+}
+.user-component_image--sm{
+    width:60px;
+    height:60px;
+}
+.user-component{
+    justify-content: space-between;
+}
