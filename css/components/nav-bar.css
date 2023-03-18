@@ -1,43 +1,50 @@
-.nav{
+.nav {
     /* nav바가 그 자리에 계속 고정되도록 하는 법 */
     position: fixed;
-    bottom:0;
+    bottom: 0;
     /* 그런데 이렇게 하면 width가 없어져버림 */
-    width:100%;
+    width: 100%;
     background-color: #F9F9F9;
-    padding: 20px 50px;
+    padding: 20px 40px;
     /* 마법의 한줄 */
-    box-sizing:border-box;
-    border-top: 1px solid rgba(121,121,121,0.3);
+    box-sizing: border-box;
+    border-top: 1px solid rgba(121, 121, 121, 0.3);
 }
-.nav_list{
+
+.nav_list {
     /* display:flex; 적용안되는 이유? nav_list에 적용해줘야함. nav의 자식은 nav_list라 한덩어리일 뿐임. */
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
-.nav_link{
+
+.nav_link {
     color: #2F363E;
+    position: relative;
 }
-.nav_notification{
+
+.nav_notification {
     background-color: tomato;
     width: 30px;
     height: 30px;
     /* width, height적용안되는 이유? nav_notification은 span이라서*/
     /* display: flex;를 써줌으로써 해결되기때문에 display: block;는 지움.*/
-    border-radius: 50%; 
-    display:flex;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:white;
+    color: white;
     font-weight: 600;
     /* icon위에 notification올리기-> 
     transform: translatex(20px) translatey(-45px); */
     position: absolute;
-    left: 20px;
-    bottom: 44px;
-    /* right: 50px이라고 했을 떄 왼쪽으로 움직이는 이유는 screen 오른쪽에서 50px 떨어진 곳으로 위치를 설정했기때문.  */
-
+    left: 16px;
+    bottom: 15px;
 }
-.nav_btn :nth-child(2){
-    position:relative;
+
+/* absolute로 같은 선상에 겹쳐지게 놨으니까 span을 아이콘 앞에쓰든 뒤에쓰든 결과값은 똑같음 */
+.fa-ellipsis-h+.nav_notification {
+    width: 7px;
+    height: 7px;
+    left: 30px;
+    bottom: 28px;
 }

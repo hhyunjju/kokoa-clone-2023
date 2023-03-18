@@ -3,6 +3,10 @@
     /* flex의 축에 따라 이 3가지를 떨어뜨리려면? status-bar이 status-bar_column의 부모니까*/
     justify-content: center;
     margin: 5px 3px;
+    /* 고정 바로 만들어주기. */
+    position:fixed;
+    box-sizing:border-box;
+    width:100%;
 }
 
 .status-bar_column:first-child span {
