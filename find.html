@@ -75,9 +75,39 @@
             <div class="find-icons_icon">
                 <i class="far fa-envelope"></i><span>invite</span></div>
         </div>
+        <div class="find-recommended">
+            <h6 class="find-recommended_title">Recommended Friends</h6>
+            <span>You have no recommended friends.</span>
+            <!-- title이 아니니까 그냥 span으로 만들면 됨. 그리고 해당 class 안에 span이 하나밖에 없으니까 따로 class 굳이 만들어줄 필요 없다. -->
+        </div>
+        <div class="open-chat">
+            <div class="open-chat_header">
+                <h4>Open Chat</h4>
+                <!-- class 줄 필요 없음. -->
+                <span>Go to Openchat Home<i class="fas fa-chevron-right fa-xs"></i></span>
+            </div>
+            <div class="open-contents">
+                <!-- 세로로 두개 div를 만드는게 아니라 column을 기준으로 한 줄에 두 column이니까 div두개 이렇게 만듦. -->
+                <div class="open-contents_column">
+                    <h5 class="open-contents_title">#BTS</h5>
+                    <h6 class="open-contents_hashtag">#bts#army#friends</h6>
+                    <div class="open-contents_members">
+                        <img src="screenshots/마루.jpg"/>
+                        <span class="open-contents_members-count">802 members</span>
+                        <div class="divider"></div>
+                        <span class="open-contents_members-status">Active</span>
+                    </div>
+                </div>
+                
+                <div  class="open-contents_column">
+                        <img class="open-contents_column-sumnail" src="screenshots/bts.jpg"/>
+                        <span class="open-contents_column-hearts">♥326</span>
+                    </div>
+            </div>
+        </div>
     </main>
 
-
+<!-- 대문자는 디자인적인 요소이다. div span 뭐로 묶어줄지 헷갈리다면 그게 하나의 묶음인지 (즉 단독 한줄로 만들만한 컨텐츠인지 생각하기) -->
 
 </body>
 

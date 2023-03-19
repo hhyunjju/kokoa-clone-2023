@@ -17,7 +17,7 @@
 .friends-screen_channel{
     margin-top:25px;
     padding-top: 15px;
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: var(--main-border);
 }
 /* .friends-screen_channel-header{
     margin-top:20px;
@@ -27,7 +27,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    color: rgba(0,0,0,0.5);
+    color: var(--light-grey);
 }
 
 /* Friends가 적혀있는 header옆의 마진이 다른 태그들에도 다 적용되기 때문에 해당 마진을 변수로 저장한다. */

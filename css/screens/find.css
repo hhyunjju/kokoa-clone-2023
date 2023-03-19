@@ -16,11 +16,83 @@
     margin-top:18px;
 }
 /*border는 마지막에 넣어줄래  */
-/* redpoint의 위치 설정+relative대상 설정 */
-.screen-header_icons-dot {
-    left: 22px;
-    bottom: 19px;
+
+.find-recommended{
+    margin: 25px 0px;
+    border-top:var(--main-border);
+    border-bottom: var(--main-border);
+    padding:25px 0px;
 }
-.screen-header_icons-link{
+.find-recommended_title{
+    font-size:14px;
+    color:var(--middle-grey);
+}
+/* grey color 변수를 만드는게 좋을 듯. 회색을 계속 써야되니까. */
+.find-recommended span{
+    margin: 100px 0;
+    text-align: center;
+    /* margin이 적용 안됨. 왜? span은 inline이니까!! */
+    display: block;
+    font-size: 18px;
+    color: var(--middle-grey);
+}
+.open-chat_header{
+    display:flex;
+    justify-content: space-between;
+    color:var(--middle-grey);
+    margin-bottom:25px;
+}
+
+.open-chat_header span{
+    color:var(--light-grey);
+}
+.open-contents_members img{
+    width:20px;
+    height:20px;
+    border-radius: 30%;
+    margin-right:5px;
+}
+.open-contents_column-sumnail{
+    border-radius: 10px;
+}
+.open-contents{
+    display:flex;
+    justify-content: space-between;
+}
+.open-contents_members{
+    display:flex;
+    color: var(--middle-grey);
+    align-items: center;
+    /* 사진이랑 글자들 가로축 가운데로 정렬 */
+    margin-top:7px;
+}
+.open-contents_title{
+    font-weight: 600;
+    margin-bottom:7px;
+}
+.open-contents_hashtag{
+    text-transform: uppercase;
+    color: var(--middle-grey);
+}
+/* divider만들기-> border로 하지않고 너비가 아주 작은 span+backgrondcolor입힌 걸로 한다. */
+.open-contents_members .divider{
+    width:2px;
+    height:15px;
+    background-color: var(--light-grey);
+    margin: 0 5px;
+}
+.open-contents_members-status{
+    color:#FF6CC6;
+}
+.open-contents_column-hearts{
+    position:absolute;
+    right:15px;
+    bottom: 15px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius:20%;
+    color:white;
+    padding:4px 7px;
+}
+.open-contents_column{
     position:relative;
 }

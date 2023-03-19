@@ -16,3 +16,11 @@
 .screen-header_icons span{
     margin-left:25px;
 }
+/* redpoint의 위치 설정+relative대상 설정 */
+.screen-header_icons-dot {
+    left: 22px;
+    bottom: 19px;
+}
+.screen-header_icons-link{
+    position:relative;
+}

@@ -31,14 +31,14 @@
 }
 
 .login-form input:not([type="submit"]){
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: var(--main-border);
     transition: border-color 1s ease-in-out;
 }
 
 /* input의 border없애기-> 밑줄그어주기
 placeholder에 쓰인 글자들 색 연하게 만들기 */
 .login-form input::placeholder{
-    opacity:rgba(0,0,0,0.4);
+    opacity:var(--light-grey);
 }
 /* input type이 text나 password일 때만 적용되도록 하기 */
 .login-form input:focus{
