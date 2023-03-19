@@ -6,8 +6,31 @@
     padding:15px 0px;
     font-size: 18px;
     margin-bottom: 10px;
+    margin-top: -15px;
+    /* screen-header에서 margin-bottom을 줌으로써 friends창에서도 link와 그만큼의 간격이 생기니까 friend창에만 있는 display-link를 활용해서 -15px을 적용함으로써 간격을 다시 좁힌다. */
 }
 #friends-display-link i{
     color:#D5D5D5;
     margin-left:15px;
 }
+
+.friends-screen_channel{
+    margin-top:25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+/* .friends-screen_channel-header{
+    margin-top:20px;
+} ------> class를 여러번 쓰지말고 주어진 class 안에서 할 수 있는 방법 생각하기. channel에서 padding주는게 더 나음.*/
+.friends-screen_channel-header{
+    margin-bottom:30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0,0,0,0.5);
+}
+
+/* Friends가 적혀있는 header옆의 마진이 다른 태그들에도 다 적용되기 때문에 해당 마진을 변수로 저장한다. */
+/* .friends_screen{
+    padding: 0px var(--horizontal-space);
+} */

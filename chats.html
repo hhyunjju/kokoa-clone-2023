@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends - Kakao Clone</title>
+    <title>Chats - Kakao Clone</title>
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -33,12 +33,12 @@
     <nav class="nav">
         <ul class="nav_list">
             <li class="nav_btn">
-                <a class="nav_link" href="friends.html"><i class="fas fa-user fa-2x"></i></a>
+                <a class="nav_link" href="friends.html"><i class="far fa-user fa-2x"></i></a>
             </li>
             <li class="nav_btn">
                 <a class="nav_link" href="chats.html">
                     <span class="nav_notification badge">1</span>
-                    <i class="far fa-comment fa-2x"></i>
+                    <i class="fas fa-comment fa-2x"></i>
                 </a>
             </li>
             <li class="nav_btn">
@@ -53,60 +53,36 @@
         </ul>
     </nav>
     <header class="screen-header">
-        <h1 class="screen-header_title">Friends</h1>
+        <h1 class="screen-header_title">Chats</h1>
         <div class="screen-header_icons">
             <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="far fa-comment-dots fa-lg"></i></span>
             <span><i class="fas fa-music fa-lg"></i></span>
             <span><i class="fas fa-cog fa-lg"></i></span>
         </div>
     </header>
-    <a id="friends-display-link">
-        <i class="fas fa-info-circle"></i>
-        Friends' Names Display
-        <i class="fas fa-chevron-right fa-xs"></i>
-    </a>
-    <!-- user-component는 한번 만들어놓고 여기저기 사용할 예정. -->
-    <main class="friends_screen main-screen">
+
+    <main class="main-screen chats_screen">
         <div class="user-component">
 
             <div class="user-component_column">
-                <img class="user-component_image user-component_image--xl" src="screenshots/마루.jpg" />
+                <img class="user-component_image user-component_image" src="screenshots/마루.jpg" />
                 <div class="user-component_profile">
                     <h4 class="user-component_myname">김현주</h4>
-                    <!-- <h6 class="user-component_subtitle">this is the space for subtitle</h6> -->
+                    <h6 class="user-component_subtitle">Please check My Kakao Account info</h6>
                 </div>
             </div>
 
-            <div class="user-component_column">어쩌구</div>
+            <div class="user-component_column">
+                <span class="user-component_time">21:22</span>
+                <!-- 여기서 21:22는 span을 써야할지말지 고민됨
+                nav바에 있는 notification을 활용하기 위해서 아예 그냥 components파일에 badge.css생성 -->
+                <div class="badge">1</div>
+            </div>
 
         </div>
 
-        <div class="friends-screen_channel">
-            <div class="friends-screen_channel-header">
-                <span>Channel</span>
-                <i class="fas fa-chevron-up fa-xs"></i>
-            </div>
-            <div class="user-component">
-
-                <div class="user-component_column">
-                    <img class="user-component_image user-component_image--sm" src="screenshots/마루.jpg" />
-                    <div class="user-component_profile">
-                        <h4 class="user-component_myname user-component_myname--not-bold">Channel</h4>
-                        <!-- myname이라고 계속 쓸지 새로운 class명을 만들지? ->class명을 추가해준다. 왜냐면 한번에 바꿔야할 때도 있고 특정해야될 때도 있으니까. 이때 어렵게 세부selctor지칭하지말고 class추가해주는게 유용. -->
-                    </div>
-                </div>
     
-                <div class="user-component_column">
-                    <div>
-                        <span>2</span>
-                        <i class="fas fa-chevron-right fa-xs"></i>
-                    </div>
-                </div>
-    
-            </div>
-            
-
-        </div>
     </main>
 
 

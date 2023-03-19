@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find - Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 상태바 만들기,, 이렇게 class이름을 정해주면 이 column이 어디에 있는 column인지 나타내기 쉬워진다.father_child -->
+    <div class="status-bar">
+        <div class="status-bar_column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar_column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar_column">
+            <span>110%</span>
+            <i class="fas fa-battery-half fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+
+    </div>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_btn">
+                <a class="nav_link" href="friends.html"><i class="far fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="chats.html">
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                    <span class="nav_dot badge"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="screen-header">
+        <h1 class="screen-header_title">Find</h1>
+        <div class="screen-header_icons">
+            <a class="screen-header_icons-link" href="#">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            </a>
+            <a class="screen-header_icons-link" href="#">
+                <span><i class="fas fa-cog fa-lg"></i></span>
+                <span class="screen-header_icons-dot badge"></span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-screen find_screen">
+        <div class="find-icons">
+            <div class="find-icons_icon">
+                <i class="fas fa-qrcode"></i><span>QR Code</span></div>
+            <div class="find-icons_icon">
+                <i class="far fa-address-book"></i><span>Add by Contracts</span></div>
+            <div class="find-icons_icon">
+                <i class="fas fa-fingerprint"></i><span>Add by ID</span></div>
+            <div class="find-icons_icon">
+                <i class="far fa-envelope"></i><span>invite</span></div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

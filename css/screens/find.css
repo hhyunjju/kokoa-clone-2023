@@ -1,0 +1,28 @@
+.find-icons{
+    display:flex;
+    justify-content: space-between;
+}
+.find-icons_icon{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+/* class없이 icon 크기 바꾸는법 */
+.find-icons_icon i{
+    font-size:35px;
+    /* icon의 크기를 font-size를 이용해서 조절할 수 있다!!*/
+}
+.find-icons_icon span{
+    margin-top:18px;
+}
+/*border는 마지막에 넣어줄래  */
+.screen-header_icons-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 22px;
+    bottom: 19px;
+}
+.screen-header_icons-link{
+    position:relative;
+}

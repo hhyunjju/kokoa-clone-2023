@@ -1,0 +1,12 @@
+/* 주황색 동그라미 디자인 */
+.badge {
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
