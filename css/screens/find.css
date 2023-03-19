@@ -16,10 +16,8 @@
     margin-top:18px;
 }
 /*border는 마지막에 넣어줄래  */
+/* redpoint의 위치 설정+relative대상 설정 */
 .screen-header_icons-dot {
-    position: absolute;
-    width: 7px;
-    height: 7px;
     left: 22px;
     bottom: 19px;
 }

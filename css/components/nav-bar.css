@@ -42,10 +42,8 @@
 }
 
 /* absolute로 같은 선상에 겹쳐지게 놨으니까 span을 아이콘 앞에쓰든 뒤에쓰든 결과값은 똑같음 */
+/* redpoint의 위치설정+relative 대상 설정 */
 .nav_dot {
-    position: absolute;
-    width: 7px;
-    height: 7px;
     left: 30px;
     bottom: 28px;
 }

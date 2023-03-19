@@ -1,0 +1,11 @@
+/* badge대신에 redpoint만들기 */
+.redpoint{
+    /* 주황색 포인트 동그라미 디자인 */
+background-color: tomato;
+border-radius: 50%;
+position: absolute;
+width: 7px;
+height: 7px
+}
+
+/* 이제 redpoint디자인은 갖다쓰고 세부class명을 통해서 위치만 각기 설정해주면 됨. */
