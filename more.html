@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More - Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 상태바 만들기,, 이렇게 class이름을 정해주면 이 column이 어디에 있는 column인지 나타내기 쉬워진다.father_child -->
+    <div class="status-bar">
+        <div class="status-bar_column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar_column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar_column">
+            <span>110%</span>
+            <i class="fas fa-battery-half fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+
+    </div>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_btn">
+                <a class="nav_link" href="friends.html"><i class="fas fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="chats.html">
+                    <span class="nav_notification badge">1</span>
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                    <span class="nav_dot redpoint"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="screen-header">
+        <h1 class="screen-header_title">More</h1>
+        <div class="screen-header_icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <a class="screen-header_icons-link" href="settings.html">
+                <span><i class="fas fa-cog fa-lg"></i></span>
+                <span class="screen-header_icons-dot redpoint"></span>
+            </a>
+        </div>
+    </header>
+    <!-- user-component는 한번 만들어놓고 여기저기 사용할 예정. -->
+    <main class="more-screen main-screen">
+    <!-- 수평으로 padding을 주기 위한 main-screen과 해당 화면만 커스터마이징 할 사항을 위한 more-screen -->
+        <div class="user-component">
+
+            <div class="user-component_column">
+                <img class="user-component_image user-component_image--xl" src="screenshots/마루.jpg" />
+                <div class="user-component_profile">
+                    <h4 class="user-component_myname">김현주</h4>
+                    <h6 class="user-component_subtitle">+1 787-493-4219 <i class="fas fa-exclamation-circle"></i></h6>
+                </div>
+            </div>
+
+            <div class="user-component_column">
+                <i class="far fa-comment-alt fa-2x"></i>
+            </div>
+
+        </div>
+        <div class="more-icon">
+            <div class="icon-row">
+                <!-- .icon-row_icon에 일정한 width, height 주면 텍스트 길이에 영향 받지 않고 아이콘들 정렬 가능; 아이콘과 span을 감싸는 박스크기를 설정해주지않으면 space-between을 했을 때 아이콘, span마다 크기가 달라서 정렬이 일정하게 안됨! -->
+                <div class="icon-row_icon">
+                    <i class="far fa-calendar-check"></i><span>Calendar</span></div>
+                <div class="icon-row_icon">
+                    <i class="fas fa-archive"></i><span>Talk Drive</span></div>
+                <div class="icon-row_icon">
+                    <i class="far fa-smile"></i><span>Emoticons</span></div>
+                <div class="icon-row_icon">
+                    <i class="fas fa-brush"></i><span>Themes</span></div>
+            </div>
+            <div class="icon-row">
+                <div class="icon-row_icon">
+                    <i class="fas fa-file-invoice-dollar"></i><span>Account</span></div>
+                <div class="icon-row_icon">
+                    <i class="far fa-comments"></i><span>Openchat</span></div>
+                <div class="icon-row_icon empty">
+                    <i class="far fa-smile"></i><span>Emoticons</span></div>
+                <div class="icon-row_icon empty">
+                    <i class="fas fa-brush"></i><span>Themes</span></div>
+            </div>
+        </div>
+        <!-- suggestions의 아이콘들은 row component사용x -->
+        <div class="more-suggestions">
+            <h4 class="more-suggestions_title">Suggestions</h4>
+            <div class="more-suggetions_icons">
+                <div class="more-suggetions_icons-row">
+                    <!-- 이미지들을 한번에 조작해야할 때도 있을 수 있으니 img가 있더라도 div로 한번 더 묶어줄 것. -->
+                    <div class="more-suggetions_icons-row-image" ><img src="screenshots/카카오스토리.png"/></div>
+                    <span class="more-suggetions_icons-row-text">Kakao Story</span>
+                </div>
+                <div class="more-suggetions_icons-row">
+                    <div class="more-suggetions_icons-row-image" ><img src="screenshots/라이언.jpg"/></div>
+                    <span class="more-suggetions_icons-row-text">Kakao Friends</span>
+                </div>
+                <div class="more-suggetions_icons-row">
+                    <div class="more-suggetions_icons-row-image" ><img src="screenshots/friendsgem.png"/></div>
+                    <span class="more-suggetions_icons-row-text">Friends Gem</span>
+                </div>
+                <div class="more-suggetions_icons-row empty">
+                    <div class="more-suggetions_icons-row-image"><img src="#" /></div>
+                    <span class="more-suggetions_icons-row-text">Kakao Story</span>
+                </div>
+            </div>
+
+        </div>
+
+ 
+    </main>
+
+
+
+</body>
+
+</html>

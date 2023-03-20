@@ -1,0 +1,60 @@
+/* 33%를 활용하는 방법. 양쪽 너비만 같으면 가운데는 가운데 정렬하기때문에 33.3%일 필요 없음. */
+ .alt-screen-header {
+    display: flex;
+                     /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    padding: var(--horizontal-space);
+    padding-top: 40px;
+    opacity: 90%;
+}
+/* .alt-header_column{
+    width: 33.3%;
+} */
+.alt-header_column:first-child{
+    width:20%;
+}
+.alt-header_column:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 22px;
+    width:60%;
+}
+.alt-header_column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:20%;
+}
+
+/* auto를 활용한 방법-다만 아이콘이 늘어나니까 중앙정렬이 안되서 기존의 hack으로 돌아감.
+    .alt-screen-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-auto를 쓰기위해 가로축 중앙으로 모음.
+    padding: var(--horizontal-space);
+    padding-top: 40px;
+    opacity: 90%;
+}
+.alt-header_column:first-child {
+    margin-right: auto;
+}
+.alt-header_column:last-child {
+    margin-left:auto;
+}
+.alt-header_title{
+    font-weight: 600;
+    font-size: 22px;
+} */
+
+/* chat-room에서 오른쪽에 아이콘이 늘어나도 '이름'이 가운데에 위치하도록 하는 방법?! */
+.alt-header_column span:last-child{
+    margin-left:27px;
+}
+.alt-header_column:first-child i{
+    font-size: 30px;
+}
+
+/* 아이콘 크기는 html에서는 섬세하게 조정 안되니까 그냥 크기만 맞추고 css에서 조정하는게 훨씬 간편하다. */

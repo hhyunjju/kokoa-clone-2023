@@ -10,11 +10,16 @@
 @import "components/screen-header.css";
 @import "components/user-component.css";
 @import "components/redpoint.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
 
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat-room.css";
 /* 이렇게 하면 style.css파일은 다른 css파일을 추가하는 파일로 사용가능 */
 body {
     font-family: 'Homemade Apple', cursive;
@@ -24,4 +29,7 @@ body {
 }
 .main-screen{
     padding: 0px var(--horizontal-space);
+}
+.empty{
+    opacity:0;
 }

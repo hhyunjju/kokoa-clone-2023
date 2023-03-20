@@ -19,6 +19,8 @@
     margin-top:8px;
     color:var(--middle-grey);
     font-size:17px;
+    display:flex;
+    align-items: center;
 }
 /* user-component_image--xl은 user-component_image와 똑같지만 너비랑 높이만 라지사이즈로 다르게 해주면 된다. */
 .user-component_image--xl{
@@ -51,4 +53,11 @@
 .user-component_time{
     margin-bottom:10px;
     display:block;
+}
+.user-component_subtitle i{
+    color:tomato;
+    margin-left:7px;
+}
+.user-component_column .fa-comment-alt{
+    color:black;
 }

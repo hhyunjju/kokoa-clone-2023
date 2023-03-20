@@ -2,12 +2,15 @@
     display: flex;
     /* flex의 축에 따라 이 3가지를 떨어뜨리려면? status-bar이 status-bar_column의 부모니까*/
     justify-content: center;
-    margin: 5px 3px;
+    margin: 0px 3px;
     /* 고정 바로 만들어주기. */
     position:fixed;
     top:0;
     box-sizing:border-box;
     width:100%;
+    z-index: 100;
+    background-color: white;
+    padding: 5px 0px;
 }
 
 .status-bar_column:first-child span {
@@ -23,7 +26,7 @@
     justify-content: center;
 }
 
-/* 시계 중앙에 놓는법: 1. justify center하기 2. 각각 33%의 너비 주기 3. 시계의 지위, 두번째 column의 자식을 중앙에 두게 만들기=두번째 column에게 display:flex; 부어 -> 두번째 column의 너비 안에서 중앙에 넣기. 이게 되는 이유? 3개의 column에 각각 33%부여함으로써 두번째 column의 중앙정렬이 screen의 정가운데가 되게 함.   */
+/* 시계 중앙에 놓는법: 1. 부모에게 justify center하기->왜 하는거지? 2. 각각 33%의 너비 주기 3. 시계의 지위, 두번째 column의 자식을 중앙에 두게 만들기=두번째 column에게 display:flex; 부어 -> 두번째 column의 너비 안에서 중앙에 넣기. 이게 되는 이유? 3개의 column에 각각 33%부여함으로써 두번째 column의 중앙정렬이 screen의 정가운데가 되게 함.   */
 .status-bar_column:last-child {
     display: flex;
     justify-content: flex-end;

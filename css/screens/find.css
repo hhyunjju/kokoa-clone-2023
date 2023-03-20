@@ -1,24 +1,5 @@
-.find-icons{
-    display:flex;
-    justify-content: space-between;
-}
-.find-icons_icon{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
-/* class없이 icon 크기 바꾸는법 */
-.find-icons_icon i{
-    font-size:35px;
-    /* icon의 크기를 font-size를 이용해서 조절할 수 있다!!*/
-}
-.find-icons_icon span{
-    margin-top:18px;
-}
-/*border는 마지막에 넣어줄래  */
-
 .find-recommended{
-    margin: 25px 0px;
+    margin: 17px 0px;
     border-top:var(--main-border);
     border-bottom: var(--main-border);
     padding:25px 0px;
@@ -40,7 +21,7 @@
     display:flex;
     justify-content: space-between;
     color:var(--middle-grey);
-    margin-bottom:25px;
+    padding-bottom:5px;
 }
 
 .open-chat_header span{
@@ -54,10 +35,17 @@
 }
 .open-contents_column-sumnail{
     border-radius: 10px;
+    width:120px;
+    height:120px;
 }
 .open-contents{
     display:flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 13px 0px;
+}
+.open-contents:first-child{
+    border-bottom:var(--main-border);
 }
 .open-contents_members{
     display:flex;
@@ -85,14 +73,21 @@
     color:#FF6CC6;
 }
 .open-contents_column-hearts{
+    display:flex;
+    align-items: center;
     position:absolute;
-    right:15px;
-    bottom: 15px;
+    right:10px;
+    bottom: 10px;
     background-color: rgba(0,0,0,0.5);
-    border-radius:20%;
+    border-radius:20px;
+    /* 퍼센트보다 픽셀로 radius주는게 더 매끈하네..? */
     color:white;
     padding:4px 7px;
+    font-size: 14px;
 }
 .open-contents_column{
     position:relative;
+}
+.open-contents_column-hearts i{
+    margin-right:3px;
 }

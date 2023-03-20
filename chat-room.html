@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat room w/ Nico - Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="chat-room-entire-screen">
+    <!-- 상태바 만들기,, 이렇게 class이름을 정해주면 이 column이 어디에 있는 column인지 나타내기 쉬워진다.father_child -->
+    <div class="status-bar">
+        <div class="status-bar_column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar_column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar_column">
+            <span>110%</span>
+            <i class="fas fa-battery-half fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+
+    </div>
+
+    <header class="alt-screen-header">
+        <!-- 중앙에 오게 만드는 방법으로 status-bar에서 사용한 hack를 활용할 예정. -->
+        <div class="alt-header_column">
+            <a href="javascript:history.back();">
+                <i class="fas fa-angle-left fa-lg"></i>
+            </a>
+        </div>
+        <div class="alt-header_column">
+            <h1 class="alt-header_title">최강귀요미 마루</h1>
+            <!-- span이라서 .title로는 크기 조절 불가. 근데 폰트사이즈는 될텐데 왜 안되지? class라고 안써서^^ -->
+        </div>
+        <div class="alt-header_column">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-bars fa-lg"></i></span>
+        </div>
+    </header>
+
+    <main class="main-screen chat-room_screen">
+        <div class="chat-room_timestamp">
+            Tuesday, June 30, 2020
+        </div>
+        <div class="message-row">
+            <img src="screenshots/마루.jpg"/>
+            <div class="message-row_contents-column">
+                <span class="message_author">최강귀요미 마루</span>
+                <div class="message_info-row">
+                    <span class="message_bubble">Hi!</span>
+                    <span class="message_time">21:27</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

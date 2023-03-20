@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 상태바 만들기,, 이렇게 class이름을 정해주면 이 column이 어디에 있는 column인지 나타내기 쉬워진다.father_child -->
+    <div class="status-bar">
+        <div class="status-bar_column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar_column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar_column">
+            <span>110%</span>
+            <i class="fas fa-battery-half fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+
+    </div>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_btn">
+                <a class="nav_link" href="friends.html"><i class="far fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="chats.html">
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
+            </li>
+            <li class="nav_btn">
+                <a class="nav_link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                    <span class="nav_dot redpoint"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="alt-screen-header">
+        <!-- 중앙에 오게 만드는 방법으로 status-bar에서 사용한 hack를 활용할 예정. -->
+        <div class="alt-header_column">
+            <a href="javascript:history.back();">
+                <i class="fas fa-angle-left fa-lg"></i>
+            </a>
+        </div>
+        <div class="alt-header_column">
+            <h1 class="alt-header_title">Settings</h1>
+            <!-- span이라서 .title로는 크기 조절 불가. 근데 폰트사이즈는 될텐데 왜 안되지? class라고 안써서^^ -->
+        </div>
+        <div class="alt-header_column">
+            <span><i class="fas fa-search fa-lg"></i></span>
+        </div>
+    </header>
+
+    <main class="main-screen settings_screen">
+        <!-- settings는 기본적으로 list! 아이콘과 이름으로 이루어져 있는,,, 그리고 row형식의 각각의 리스트를 column을 통해 두 파트로 나눈다. -->
+        <ul class="settings-list main-list">
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Notices</span>
+                </div>
+                <div class="settings-list-row_column"></div>
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-flask"></i>
+                    <span>Kakao Lab</span>
+                </div>
+                <div class="settings-list-row_column"></div>
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Version</span>
+                </div>
+                <div class="settings-list-row_column">Latest Version</div>  
+            </li>
+        </ul>
+        <ul class="settings-list second-list">
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-lock"></i>
+                    <span>Privacy</span>
+                </div>
+                <div class="settings-list-row_column"></div>
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="far fa-bell"></i>
+                    <span>Notifications</span>
+                </div>
+                <div class="settings-list-row_column"></div>
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="far fa-user"></i>
+                    <span>Friends</span>
+                </div>
+                <div class="settings-list-row_column"></div>  
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="far fa-comment"></i>
+                    <span>Chats</span>
+                </div>
+                <div class="settings-list-row_column"></div>  
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="far fa-sun"></i>
+                    <span>Display</span>
+                    <span class="settings-list-row_new badge">N</span>
+                </div>
+                <div class="settings-list-row_column"></div>  
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-brush"></i>
+                    <span>Themes</span>
+                    <span class="settings-list-row_new badge">N</span>
+                </div>
+                <div class="settings-list-row_column">Default theme</div>  
+            </li>
+            <li class="settings-list-row">
+                <div class="settings-list-row_column">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Call</span>
+                </div>
+                <div class="settings-list-row_column"></div>  
+            </li>
+        </ul>
+    </main>
+
+
+</body>
+<!-- 아이콘을 항상 span으로 감싸는 이유는? -->
+</html>

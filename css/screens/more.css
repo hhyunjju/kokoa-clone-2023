@@ -1,0 +1,28 @@
+/* class=main_screen에 more_screen추가해 준다. */
+.more-screen .icon-row{
+    margin: 35px 0;
+    padding-bottom: 10px;
+}
+.more-suggestions_title{
+    border-top: var(--main-border);
+    padding:30px 0;
+    font-weight: 60;
+}
+
+.more-suggetions_icons{
+    display:flex;
+    justify-content: space-between;
+}
+.more-suggetions_icons-row img{
+    width:60px;
+    height:60px;
+    border-radius: 10px;
+    margin-bottom:10px;
+}
+/* more-suggetions_icons-row-image이거로 조정하면 사진크지 조절 안되는 이유-> 사진 자체의 크기가 아닌 그걸 감싸고 있는 공간을 줄이는거라 사진 크기는 조절 안되는 듯. 그럼 굳이 div를 써야하나? 의문... */
+.more-suggetions_icons-row{
+    width:25vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
