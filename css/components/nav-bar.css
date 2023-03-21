@@ -48,3 +48,47 @@
     left: 30px;
     bottom: 28px;
 }
+/* transform할 요소를 늘릴 때 각각에 ";"다는게 아니라 마지막에만 달아야함. */
+@keyframes notification-animation{
+    0%{
+        transform:none;
+    }
+    50%{
+        transform: translatey(-5px) rotatey(360deg);
+    }
+    100%{
+        transform:none;
+    }
+}
+.nav_notification{
+    animation: notification-animation 2s ease-in-out infinite;
+}
+@keyframes appear-Btn-animation{
+    from{
+        transform:translatey(100px);
+        opacity:0;
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
+}
+/* 시작점을 밑으로 내리기 위해서 translatey를 keyframes이 아닌 selector에 둔다. */
+.nav_btn{
+    transform:translatey(50px);
+    opacity:0;
+    animation: appear-Btn-animation 0.5s ease-in-out forwards;
+}
+/* 이걸 유지한 채로 나머지 애니메이션들을 delay시켜서 애니메이션에 변화줄 수 있음 */
+.nav_btn:nth-child(2){
+    animation-delay: 0.2s;
+}
+.nav_btn:nth-child(3){
+    animation-delay: 0.4s;
+}
+.nav_btn:nth-child(4){
+    animation-delay: 0.6s;
+}
+/* 나는 nth-child마다 각각 애니메이션을 만드는 걸 생각했는데 그렇게 하지 않고 animation-delay + forwards + 시작위치 +opacity 조절로 가능함. */
+
+/* splash스크린이 있는 경우는 시간차 계산해야 둘 다 볼 수 있음. */

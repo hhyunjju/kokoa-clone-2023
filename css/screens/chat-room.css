@@ -1,6 +1,6 @@
 #chat-room-entire-screen{
     background-color: #ABC1D1;
-    height:11000vh;
+    height:500vh;
 }
 /* chat-room 안에 있는 alt-header도 fixed 되어야함. */
 #chat-room-entire-screen .alt-screen-header{
@@ -25,6 +25,7 @@
     background-color: rgba(0,0,0,0.2);
     padding: 7px 12px;
     border-radius: 20px;
+    margin-bottom:25px;
 }
 .chat-room_screen{
     display:flex;
@@ -35,9 +36,62 @@
 .message-row img{
     width: 50px;
     height: 50px;
+    border-radius: 22px;
+    margin-right: 10px;
 }
+.message-row{
+    width:100%;
+    display:flex;
+}
+.message_author{
+    /* author은 span이라 그냥 margin적용하면 적용안됨 */
+    display:block;
+    margin-bottom:5px;
+}
+/* 말풍선 만들기 */
+.message_bubble{
+    background-color: white;
+    padding: 8px 10px;
+    border-radius: 12px;
+    margin-right:5px;
+    border-top-left-radius: 0px;
+    font-weight: 600;
+}
+/* 순서 전환에 message-info가 flex-contatiner라는 사실 활용 */
+.message_info-row{
+    display:flex;
+    align-items: flex-end;
+    margin-bottom:25px;
+}
+.message_author, .message_time{
+    color:var(--middle-grey);
+    font-size:14px;
+}
+.message-row-right{
+    justify-content: flex-end;
+}
+.message-row-right .message_bubble{
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 12px;
+    margin-right: 0;
+    /* -5가 아니라 0임 */
+    margin-left:5px;
+}
+/* column이 아니라 row인 이유는 세로로 row 2개 배열되어있던 걸 display:flex를 통해서 나란히 놓은거기 때문에 bubble과 time의 원래 속성은 row이다. */
+.message-row-right .message_info-row{
+    flex-direction: row-reverse;
+}
+/* 그렇지만 margin까지 알아서 거꾸로 놔주진 못함. */
 
-
+/* 순서바꾸는 방법2
+ .message-row-right .message_bubble{
+    order:1;
+}
+.message-row-right .message_time{
+    order: 0;
+} */
+/* 같은 스타일이니까 한번에 바꿀 수 있게 같이 묶어주는 게 좋음. */
 
 
 
@@ -51,3 +105,131 @@
     border-radius: 20px;
 }
 대신에 chat-room-entire-screen 즉 body를 display:flex;한다. 그럼 div였던 timestamp가 span처럼 변하고 body의 자식으로서 축에 따라 이리저리 움직일 수 있게됨.*/
+
+.reply{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    /* 이 padding이 position을 오른쪽으로 밀어버림;즉, 지정한 너비는 지키면서 거기에 padding 등의 요소들을 적용하려고 하다 보니 box가 커지는 것. 그래서 볼더만큼을 박스의 한계로 설정해야함. */
+    box-sizing: border-box;
+    align-items: center;
+}
+.reply input{
+    height:30px;
+    /* width: 100% 했을 때 안커지는 이유는 input이 column이라는 박스 안에 들어가 있기 때문임. 즉, column이라는 부모가 너비를 가지지 않는 이상 자식의 너비는 적용될 수 없음. 근데 그러면 자식의 너비를 부모의 너비보다 크게 설정하면 어떻게 되지? 그리고 이게 왜 100%여야되는지는 모르겠다.*/
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 15px;
+    background-color: #F8F8F8;
+    /* input에도 padding 줄 수 있음 */
+    text-indent: 10px;
+    padding: 3px 0;
+    margin: 3px 0;
+}
+.reply input::placeholder{
+    font-size: 17px;
+    text-indent: 10px;
+}
+
+.reply_column:first-child{
+    width: 8%;
+}
+.reply_column:first-child i{
+    padding-left: 2px;
+}
+.reply_column:last-child{
+    width:92%;
+    position:relative;
+    /* 아이콘들을 reply_column위에 올릴거니까. */
+}
+.reply_column:last-child button{
+    position:absolute;
+    right:1px;
+    top:5px;
+    /* absolute이기 때문에 중앙 정렬 일일이 봐야함? display:flex쓸 수 있는 것 같기도. */
+    background-color: var(--yellow);
+    border:none;
+    width:33px;
+    height:33px;
+    border-radius: 50%;
+}
+/* button안에 있는 icon도 선택될 수 있기 때문에 direct children만 움직이게 만든다. */
+.reply_column:last-child > i{
+    position:absolute;
+    right:0;
+    right: 40px;
+    top: 13.5px;
+}
+.reply_column:last-child button>i{
+    font-size: 15px;
+}
+/* position:fixed 후에 너비를 10%랑 90%로 만들어서 화면을 꽉 채우고 padding을 양쪽에 15px씩 줬더니 position자체가 오른쪽 -30px가 됨. */
+
+/* 
+.reply_column button:focus,
+.reply_column button:active{
+    outline:none;
+ } */
+
+ .reply_column>i{
+    color: var(--middle-grey);
+    font-size: 23px;
+}
+
+/* 패딩을 주면서도 박스 크기는 커지지 않게 하는법. 즉 해당 박스가 오른쪽으로 안커지도록.. */
+/* padding없이 text-indent로 해결!!!!! */
+/* 문제: text-indent를 padding으로 하고싶어서 padding-left를 주니까 input박스가 오른쪽으로 커져서 왼쪽 오른쪽에 균일하게 설정해놓은 여백이 오른쪽에선 자꾸 없어짐. 그래서 box-sizing을 썼는데 그렇게 하니까 쓰는 순서에 상관 없이 위아래에 준 padding도 사라져버려서 padding못 씀. 왼쪽 오른쪽 여백을 유지한 채로 즉 input박스 크기는 그대로 유지하면서 안에 내용물들 여백을 조정하는 방법은....? 근데 보통 absolute랑 text-indent로 해결하면 될거같긴한데 여튼 이게 문제였음. */
+
+/* .chat-room_screen{
+    animation: fadein 0.8s linear;
+}
+@keyframes fadein{
+    from{
+        transform: translatey(30px);
+        opacity:0;
+        이렇게 되면 30px를 찍은 다음에 transform:none위치로 돌아오게되니까 커서가 내려가있게 됨. 화면 즉 main을 움직이게 해서 벌어진 일.
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
+} */
+
+@keyframes fadeinfromleft{
+    from{
+        transform:translatex(-100px);
+        opacity:0;
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
+
+}
+@keyframes fadeinfromright{
+    from{
+        transform:translatex(100px);
+        opacity:0;
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
+
+}
+
+.message-row-left{
+    animation: fadeinfromleft 0.3s linear;
+}
+
+.message-row-right{
+    animation: fadeinfromright 0.3s linear;
+}
+
+.reply:focus-within 
+/* 내부적으로 focus된 element가 있는지 알 수 있도록 해주는 property: focus-within 
+reply:focus-within이란 즉, reply 내부에 어떤 element가 focus 되어 있다면 이라는 뜻이다.*/

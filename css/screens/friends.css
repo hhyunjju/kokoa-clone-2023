@@ -34,3 +34,31 @@
 /* .friends_screen{
     padding: 0px var(--horizontal-space);
 } */
+
+/* splash screen 만들기 */
+#splash-screen{
+    background-color: var(--yellow);
+    /* splash 스크린을 맨 앞으로 올린다.-> absolute//여기선 body에 기준해서 정렬하기를 원하므로 따로 relative를 설정하지 않는다. */
+    position:absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    z-index: 110;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:65px;
+    color:#3C1E1E;
+    animation: hidesplashscreen 0.4s 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes hidesplashscreen{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+}

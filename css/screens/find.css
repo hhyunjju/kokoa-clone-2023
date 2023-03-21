@@ -91,3 +91,24 @@
 .open-contents_column-hearts i{
     margin-right:3px;
 }
+
+/* 하트비트 만드는 방법// 근데 scale(1.1)정도로 작게하면 흔들리는 현상 발생 -> will change라는 property를 활용해보자. */
+@keyframes heartbeat{
+    0%{
+        color:white;
+        transform: none;
+    }
+    50%{
+        color:tomato;
+        transform: scale(1.1);
+    }
+    100%{
+        color:white;
+        transform: none;
+    }
+}
+/* heart count전체가 hover일 때 icon만 애니메이션 갖길 원할 때 쓰는 selector */
+.open-contents_column-hearts:hover i{
+    will-change: transform;
+    animation: heartbeat 1s linear infinite;
+}
