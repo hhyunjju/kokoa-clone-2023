@@ -230,6 +230,51 @@
     animation: fadeinfromright 0.3s linear;
 }
 
-.reply:focus-within 
 /* 내부적으로 focus된 element가 있는지 알 수 있도록 해주는 property: focus-within 
 reply:focus-within이란 즉, reply 내부에 어떤 element가 focus 되어 있다면 이라는 뜻이다.*/
+.reply:focus-within .reply_column:first-child,
+.reply:focus-within .reply_column:last-child i,
+.reply:focus-within .reply_column:last-child button{
+    opacity: 0;
+}
+.reply:focus-within input{
+    width: 94vw;
+    transform: translatex(-9%) translatey(-80px);
+    /* 왼쪽 여백으로 이동하도록. */
+    border: 2px solid var(--yellow);
+    /* transform:translatey(-80px); 이렇게 하면 translatex랑 동시에 작용 못하고 제일 아랫것만 작용함. */
+}
+
+.reply input, .reply{
+    transition: all .3s ease-in-out;
+    /* input에 변화를 많이 줄 것이기 때문에 이렇게 하면 모든 변화를 부드럽게 볼 수 있다. */
+}
+.reply .reply_column:first-child,
+.reply .reply_column:last-child i,
+.reply .reply_column:last-child button{
+    transition: opacity .3s ease-in-out;
+    /* focus-within에 애니메이션을 부여해서 변화하는 방법을 조정할 수 있음. */
+}
+/* 중요한 건, repy input이 transition이 없다면 어색함..*/
+
+/* .reply:focus-within .reply input{}이라고 하니까 변화가 적용이 안됨.. */
+.reply:focus-within{
+    transform:translatey(80px);
+}
+
+
+/* .reply_column:last-child>i{
+    animation: giggle 0.3s ease-in-out infinite;
+    }
+    
+    @keyframes giggle {
+    0% {
+    transform: scale(0.9, 1.1);
+    }
+    50% {
+    transform: scale(1.1, 0.9);
+    }
+    100% {
+    transform: scale(0.9, 1.1);
+    }
+    } */
